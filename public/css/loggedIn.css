@@ -1,0 +1,71 @@
+.edit
+{
+    border: 1px dashed gray;
+}
+
+.mod:hover
+{
+    cursor: pointer
+}
+
+.drag_panel
+{
+    cursor:move;
+}
+
+.column  .placeholder{
+	background: #f0f0f0;
+	border:1px dashed #ddd;
+}
+
+#console
+{
+    position: absolute;
+    height: 40px;
+}
+
+._handle
+{
+    border: 1px solid #f0f0f0;
+}
+
+#upload_blockUI
+{
+	width: 600px;
+	height: 75px;
+	text-align: left;
+}
+
+#upload_blockUI #imageSwapUploader
+{
+	margin-left: 100px;
+	text-align: center;
+}
+
+#updateText a
+{
+    color: white;
+}
+
+#updateText
+{
+    width: 570px;
+    height: 20px;
+    display: block;
+    padding: 5px;
+    margin: 10px;
+    background-color: #991b26;
+    text-align: center;
+    cursor: pointer;
+}
+
+#updateText:hover
+{
+    background-color: #8b0101;
+}
+
+.placeholder
+{
+	background: #f0f0f0;
+	border:1px dashed #ddd;
+}

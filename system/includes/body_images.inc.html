@@ -1,0 +1,31 @@
+<?php 
+$imgs = $this->options['content']['images'];
+$columnAmount = 5;
+?>
+
+<?php if ($this->options['logged_in']) { ?>
+<div id="upload_blockUI" class="hidden">
+    <a href="#" class="close" >[ x ]</a>
+    <br/>
+	<input id="imageSwap" name="imageSwap" type="uploadify" />
+    <br />
+    <div id="imageSwapHolder"></div>
+</div>
+<?php } ?>
+
+
+<p>This page demo's how the jquery.crop.js and jquery.groupPanels.js work with one another.</p>
+
+
+<ul id="sort_grid_holder">
+    <?php for ($c=1; $c<=$columnAmount; $c++) { // start looping through all the columns ?>
+    <ul id="column_<?php echo $c ?>" class="sort_grid">
+        <?php for($i=0; $i<sizeof($imgs); $i++) { // start looping through all the images ?>
+            <?php if ($imgs[$i]['column_id'] == $c) { // check if the column is equal to the panel column if it is draw it in its appropriate spot ?>
+                <li id="box_<?php echo $imgs[$i]['id'] ?>"><img src="<?php echo DB_URI.'imagesPage/'.$imgs[$i]['image'] ?>" class="crop drag_handle imgSwap" /></li>
+            <?php } // close if statement ?>
+        <?php } // close for loop ?>
+    </ul>
+    <?php } // close for loop ?>
+    <div id="clear"></div>
+</ul>

@@ -1,0 +1,62 @@
+<div id="head_container">
+    <?php //HIDDEN LOGIN FORM ?>
+    <div id="login_blockUI" class="hidden">
+        <a href="#" class="close" >[ x ]</a>
+        <form action="<?php echo REQ_URI ?>" method="POST">
+            <label class="label_style">Username:</label><input type="text" name="username" class="input_style" value="<?php echo $this->options['cookieInfo']['username'] ?>" />
+            <label class="label_style">Password:</label><input type="password" name="password" class="input_style" value="<?php echo $this->options['cookieInfo']['password'] ?>" />
+            <label class="label_style">Remember Me<input type="checkbox" name="remember" value=true /></label>
+            <br/>
+            <input type="hidden" value="<?php echo $this->options['cookieInfo']['user_id'] ?>" name="cookie_id">
+            <input type="submit" value="login" name="action" />
+        </form>
+    </div>
+    
+    <?php // Check for any errors, the size of the array is >= 1 show them ?>
+    <?php if (sizeof($this->options['error']) >= 1) { ?>
+        <div id="error_blockUI" class="hidden">
+            <a href="#" class="close" >[ x ]</a>
+            
+            <?php foreach($this->options['error'] AS $error) { ?>
+                <?php echo $error ?>
+            <?php } ?>
+            <hr/>
+            <form action="<?php echo REQ_URI ?>" method="POST">
+                <label class="label_style">Username:</label><input type="text" name="username" class="input_style" value="<?php echo $this->options['cookieInfo']['username'] ?>" />
+                <label class="label_style">Password:</label><input type="password" name="password" class="input_style" value="<?php echo $this->options['cookieInfo']['password'] ?>" />
+                <label class="label_style">Remember Me<input type="checkbox" name="remember" value=true /></label>
+                <br/>
+                <input type="hidden" value="<?php echo $this->options['cookieInfo']['user_id'] ?>" name="cookie_id">
+                <input type="submit" value="login" name="action" />
+            </form>
+        </div>
+    <?php } ?>
+    
+    <?php if ($this->options['logged_in']) { ?>    
+    <div id="loggedIn"><h3>Have fun editing <?php echo $this->options['cookieInfo']['username'] ?></h3></div>
+    <div id="console"></div>
+    <?php } ?>
+    
+    <!-- links -->
+    <ul id="links">
+    <?php
+    foreach($this->links AS $link) { ?>
+		
+        <li><a href="<?php echo URIPATH.'index.php/'.str_replace(" ","_", $link['link']); ?>" ><?php echo $link['title'] ?></a> | </li>
+    <?php } ?>
+    </ul>
+    
+    <!-- login -->
+    <ul id="login">
+        <?php if ($this->options['logged_in']) { ?>
+            <?php $p = $this->uri['current_page'] == 'template_page_detail' ? '&' : '?'; ?>
+			<li><a href='<?php echo REQ_URI.$p ?>action=logout'>Logout</a></li>
+        <?php } else { ?>
+            <li><a href="javascript:void(0)" class="login_btn">login</a></li>
+        <?php } ?>
+    </ul>
+    
+    <div id="clear"></div>
+</div>
+
+<hr />

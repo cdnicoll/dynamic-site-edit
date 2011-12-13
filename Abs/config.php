@@ -1,0 +1,14 @@
+<?php $config['backuppath'] = "/backup/";
+$config['db.host'] = "localhost";
+$config['db.username'] = "root";
+$config['db.password'] = "root";
+$config['db.name'] = "site_edit";
+$config['db.port'] = "3306";
+$config['db.charset'] = "utf8";
+$config['exclude.dir'] = "backup,cgi-bin";
+$config['exclude.file'] = ".project,*.exe";
+$config['autoarchive'] = true;
+$config['timezone'] = "America/Vancouver";
+$config['username'] = "admin";
+$config['password'] = "test";
+$config['memory'] = "32";

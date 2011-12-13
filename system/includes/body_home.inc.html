@@ -1,0 +1,20 @@
+<?php if ($this->options['logged_in']) { //Check if the user is logged in ?>
+<div id="slider" class="hide">
+        <textarea name="myeditor"></textarea>
+</div>
+<?php } ?>
+
+<?php
+$content = $this->options['content']['info'];
+
+foreach($content as $c) { ?>
+    <div id="home_content" class="<?php if($this->options['logged_in']) echo 'edit'; ?>">
+        <div class="mod {table: 'content', id: <?php echo $c['id'] ?>, column: 'title'}"><?php echo html_entity_decode($c['title']) ?></div>
+        <div class="mod {table: 'content', id: <?php echo $c['id'] ?>, column: 'content'}"><?php echo html_entity_decode($c['content']) ?></div>
+    </div>
+<?php } ?>
+
+
+<div class="growlUI" style="display:none">
+    <p>content updated!</p>
+</div>

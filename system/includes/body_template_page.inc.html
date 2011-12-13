@@ -1,0 +1,7 @@
+<?php $pages = $this->options['content']['pages']; ?>
+
+<ul>
+<?php foreach ($pages as $page) { ?>
+	<a href="<?php echo $this->uri['uri_link'] ?>/template_page_detail/?id=<?php echo $page['id'] ?>"><li><?php echo $page['desc_title'] ?></li></a>
+<?php } ?>
+</ul>

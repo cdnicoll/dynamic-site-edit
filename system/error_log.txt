@@ -1,0 +1,23 @@
+[02-Feb-2010 19:16:22] PHP Parse error:  syntax error, unexpected T_CATCH in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/page.class.php on line 156
+[02-Feb-2010 19:38:22] PHP Parse error:  syntax error, unexpected '}' in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/controller.class.php on line 82
+[02-Feb-2010 19:49:37] PHP Parse error:  syntax error, unexpected T_VARIABLE in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 347
+[11-Feb-2010 22:10:52] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 339
+[11-Feb-2010 22:12:42] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 346
+[11-Feb-2010 22:12:43] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 346
+[11-Feb-2010 22:12:48] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 339
+[11-Feb-2010 22:13:04] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 346
+[23-Feb-2010 00:56:11] PHP Fatal error:  Cannot use string offset as an array in /Users/Dropbox/www/DynamicSiteEdit/www/system/includes/body_images.inc.html on line 12
+[23-Feb-2010 17:35:14] PHP Parse error:  syntax error, unexpected T_BREAK in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 144
+[23-Feb-2010 17:35:21] PHP Parse error:  syntax error, unexpected '}' in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/controller.class.php on line 97
+[23-Feb-2010 17:35:45] PHP Fatal error:  Call to a member function updateText() on a non-object in /Users/Dropbox/www/DynamicSiteEdit/www/system/lib/view.class.php on line 158
+[08-Mar-2010 23:22:31] PHP Parse error:  syntax error, unexpected T_ECHO in /Users/Dropbox/www/DynamicSiteEdit/www/system/includes/body_panels.inc.html on line 31
+[11-Mar-2010 00:03:54] PHP Parse error:  syntax error, unexpected '=', expecting ',' or ';' in /Users/Dropbox/www/DynamicSiteEdit/www/system/includes/html.head.html on line 10
+[11-Mar-2010 00:04:06] PHP Parse error:  syntax error, unexpected '=', expecting ',' or ';' in /Users/Dropbox/www/DynamicSiteEdit/www/system/includes/html.head.html on line 10
+[11-Mar-2010 00:04:34] PHP Parse error:  syntax error, unexpected ';' in /Users/Dropbox/www/DynamicSiteEdit/www/system/includes/html.head.html on line 10
+[12-Dec-2011 22:28:41] PHP Parse error:  syntax error, unexpected '{' in /Users/cody/sites/DynamicSiteEdit/www/system/includes/head_banner.inc.html on line 52
+[12-Dec-2011 22:28:57] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /Users/cody/sites/DynamicSiteEdit/www/system/includes/head_banner.inc.html on line 52
+[12-Dec-2011 22:29:07] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /Users/cody/sites/DynamicSiteEdit/www/system/includes/head_banner.inc.html on line 52
+[12-Dec-2011 22:29:09] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /Users/cody/sites/DynamicSiteEdit/www/system/includes/head_banner.inc.html on line 52
+[12-Dec-2011 22:29:22] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /Users/cody/sites/DynamicSiteEdit/www/system/includes/head_banner.inc.html on line 52
+[12-Dec-2011 22:30:36] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /Users/cody/sites/DynamicSiteEdit/www/system/includes/head_banner.inc.html on line 52
+[12-Dec-2011 22:32:12] PHP Parse error:  syntax error, unexpected T_ECHO in /Users/cody/sites/DynamicSiteEdit/www/system/includes/head_banner.inc.html on line 52

@@ -1,0 +1,40 @@
+<?php
+$panel = $this->options['content']['panels'];
+/*
+[id] =>
+[column_id] =>
+[sort_no] =>
+[title] =>
+[content] =>
+
+<ul class="name">
+    <li id="box_x">
+        <h2>TITLE</h2>
+        <p>the content</p>
+    </li>
+</ul>
+
+*/
+?>
+
+<?php if ($this->options['logged_in']) { //Check if the user is logged in ?>
+<div id="slider" class="hide">
+        <textarea name="myeditor"></textarea>
+</div>
+<?php } ?>
+
+
+<ul class="sort_row">
+    <?php for($i=0; $i<sizeof($panel); $i++) { // loop through all the content in the database ?>
+        
+        <li id="box_<?php echo $panel[$i]['id'] ?>">
+            <div class="drag_handle mod {table: 'widgets', id: <?php echo $panel[$i]['id'] ?>, column: 'title'}"><?php echo html_entity_decode($panel[$i]['title']) ?></div>
+        	<div class="mod {table: 'widgets', id: <?php echo $panel[$i]['id'] ?>, column: 'content'}"><?php echo html_entity_decode($panel[$i]['content']) ?></div>
+        </li>
+        
+    <?php } // Close for loop ?>
+</ul>
+
+<div class="growlUI" style="display:none">
+    <p>content updated!</p>
+</div>

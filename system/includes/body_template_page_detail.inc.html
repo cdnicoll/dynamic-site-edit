@@ -1,0 +1,65 @@
+<?php
+$main_content = $this->options['content']['page'];
+$boxes = $this->options['content']['box'];
+$extra_content = $this->options['content']['content'];
+
+
+
+?>
+
+
+<?php if ($this->options['logged_in']) { //Check if the user is logged in ?>
+<div id="slider" class="hide">
+        <textarea name="myeditor"></textarea>
+        <!-- -->
+</div>
+<div id="upload_blockUI" class="hidden">
+    <a href="#" class="close" >[ x ]</a>
+    <br/>
+	<input id="imageSwap" name="imageSwap" type="uploadify" />
+    <br />
+    <div id="imageSwapHolder"></div>
+</div>
+<?php } ?>
+
+<div id="template_main">
+	<!-- float left -->
+	<div id="template_main_content">
+		<div class="mod {table: 'template_page', id: <?php echo $_GET['id'] ?>, column: 'desc_title'}"><?php echo html_entity_decode($main_content['desc_title']) ?></div>
+		<div class="mod {table: 'template_page', id: <?php echo $_GET['id'] ?>, column: 'descr'}"><?php echo html_entity_decode($main_content['descr']) ?></div>
+	</div>
+	
+	<!-- float right -->
+	<div id="template_sideContent">
+		<div class="mod {table: 'template_page', id: <?php echo $_GET['id'] ?>, column: 'stats_title'}"><?php echo html_entity_decode($main_content['stats_title']) ?></div>
+		<div class="mod {table: 'template_page', id: <?php echo $_GET['id'] ?>, column: 'stats'}"><?php echo html_entity_decode($main_content['stats']) ?></div>
+	</div>
+	
+	<div id="clear"></div>
+</div>
+
+<ul class="sort_column">
+    <?php for($sc=0; $sc<sizeof($boxes); $sc++) { // loop through all the content in the database ?>
+        
+        <li id="box_<?php echo $boxes[$sc]['id'] ?>">
+            <img src="<?php echo DB_URI.'template_page/'.$main_content['id'].'/'.$boxes[$sc]['image'] ?>" class="box_crop drag_handle imgSwap" />
+        </li>
+        
+    <?php } // Close for loop ?>
+<div id="clear"></div>
+</ul>
+
+<ul class="sort_row">
+    <?php for($i=0; $i<sizeof($extra_content); $i++) { // loop through all the content in the database ?>
+        
+        <li id="box_<?php echo $extra_content[$i]['id'] ?>">
+            <div class="drag_handle mod {table: 'template_content', id: <?php echo $extra_content[$i]['id'] ?>, column: 'title'}"><?php echo html_entity_decode($extra_content[$i]['title']) ?></div>
+        	 <div class="mod {table: 'template_content', id: <?php echo $extra_content[$i]['id'] ?>, column: 'content'}"><?php echo html_entity_decode($extra_content[$i]['content']) ?></div>
+        </li>
+        
+    <?php } // Close for loop ?>
+</ul>
+
+<div class="growlUI" style="display:none">
+    <p>content updated!</p>
+</div>

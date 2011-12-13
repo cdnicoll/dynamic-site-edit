@@ -1,0 +1,112 @@
+/************************************
+@group BODY 
+************************************/
+#body_container 
+{
+	padding-top: 20px;
+}
+
+#home_content
+{
+    width: 600px;
+    color: #92c35a;
+    /*border: 1px dashed gray;*/
+    margin: 0px 20px 10px 0px;
+}
+
+.hide
+{
+    display: none;
+}
+
+/************************************
+@group PANELS 
+************************************/
+.sort_row
+{
+    width: 600px;
+}
+
+.sort_row h2
+{
+   background-color: #92c35a;
+   color: #fff;
+   padding-left: 10px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+}
+
+/************************************
+@group IMAGES
+************************************/
+.sort_grid
+{
+    width: 80px;
+    min-height:80px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    display: inline;
+    float: left;
+}
+
+ul.sort_grid li
+{
+    margin: 5px;
+}
+
+
+/************************************
+@group UPLOAD FILES
+************************************/
+.upload_box
+{
+    border: 1px dashed gray;
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+/************************************
+@group TEMPLATE PAGE
+************************************/
+#template_main
+{
+	position: relative;
+	width: 840px;
+}
+
+#template_main_content
+{
+	float: left;
+	/*width: 595px;*/
+	width: 60%;
+}
+
+#template_sideContent
+{
+	float: right;
+	/*width: 230px;*/
+	width: 30%;
+	border: 1px solid gray;
+	padding: 5px;
+	font-size: 80%;
+}
+
+#template_sideContent ul li
+{
+    margin-left: 20px;
+    font-size: 90%;
+}
+
+ul.sort_column li
+{
+    float: left;
+    display: inline;
+    margin-right: 10px;
+}
+
+.sort_column
+{
+    padding-bottom: 10px;
+}

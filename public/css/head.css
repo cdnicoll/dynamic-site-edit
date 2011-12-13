@@ -1,0 +1,43 @@
+/************************************
+@group HEADER 
+************************************/
+#loggedIn
+{
+    background-color: #804000;
+    margin-bottom: 15px;
+    padding: 7px;
+    border: 1px solid #806b00;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#loggedIn h3
+{
+    color: white;
+    font-weight: bold;
+}
+
+#head_container 
+{
+	
+}
+
+ul#links
+{
+    float: left;
+}
+
+ul#links li
+{
+   display: inline;
+}
+
+ul#login
+{
+    float: right;
+}
+
+ul#login li a
+{
+    color: #343e4c;
+}
