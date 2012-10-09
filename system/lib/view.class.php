@@ -340,11 +340,11 @@ class View
 	*/
     private function pageSpecificScript($currentPage)
     {
-    	switch($currentPage)
+        switch($currentPage)
     	{
     	    case 'home':
     	        $this->content['info'] = $this->controller->getHomeContent();
-    	        if ($this->getIsLoggedIn()) {
+                if ($this->getIsLoggedIn()) {
     	            // add content if the user is logged in
     	            $this->jsHead[] = '<script type="text/javascript" src="'.JS.'ckeditor/ckeditor.js"></script>';
     	            

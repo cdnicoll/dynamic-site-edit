@@ -1,12 +1,15 @@
 <?php
+error_reporting(E_ALL); 
+ini_set("display_errors", 1);
+
 session_start();
 ob_start();
-define('BASEPATH', $_SERVER['DOCUMENT_ROOT'].'/DynamicSiteEdit/www/');      // CHANGE TO THE PATH OF THE SITE.
+define('BASEPATH', $_SERVER['DOCUMENT_ROOT'].'/');      // CHANGE TO THE PATH OF THE SITE.
 
 // ====================================================================================================
 
-define('BASEURI', 'http://localhost');
-define('URIPATH', 'http://localhost/DynamicSiteEdit/www/');
+define('BASEURI', 'http://dynamicsiteedit.local');
+define('URIPATH', 'http://dynamicsiteedit.local/');
 
 // ====================================================================================================
 
@@ -25,4 +28,3 @@ include(BASEPATH.'system/lib/config.lib.php');
 include_once(LIB.'page.class.php');
 
 $page = new Page();
-?>

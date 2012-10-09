@@ -39,6 +39,7 @@ class Controller
 		    'uri_link' => $this->uri->getURI(),
 		    'bread_crumb' => $this->uri->getCrumbPath()
 		);
+
 	}
 	
 	// @return uri options array 

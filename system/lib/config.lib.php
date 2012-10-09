@@ -28,22 +28,21 @@ include_once(LIB.'FirePHPCore/fb.php');                 // include firephp class
 $fb = new FirePHP();
 $fb->setEnabled(false);
 FB::setEnabled(false);
+ini_set('log_errors',TRUE);
+ini_set("error_log", BASEPATH.'system/'."error_log.log");
 
 if (DEBUGGER) {
+  //error_reporting(E_ALL); 
+  //ini_set("display_errors", 1);
+
 	$fb->setEnabled(true);       // enables or disables firephp
+
 	FB::setEnabled(true);
-	ini_set('log_errors',TRUE);
-	ini_set("error_log", BASEPATH.'system/'."error_log.txt");
 	
-    $fb->registerExceptionHandler();
-    $fb->registerErrorHandler();
+  $fb->registerExceptionHandler();
+  $fb->registerErrorHandler();
 }
-else {
-    $fb->setEnabled(false);       // enables or disables firephp
-    FB::setEnabled(false);
-	ini_set('log_errors',TRUE);
-	ini_set("error_log", BASEPATH.'system/'."error_log.txt");
-}
+
 
 FB::group("config info", array('Collapsed' => true, 'Color' => '#00f'));	// Start Group
    FB::log(BASEPATH, 'BASEPATH');
@@ -64,7 +63,7 @@ FB::groupEnd();	// End group
 $db_info = array(
     'host' => 'localhost',
     'username' => 'root',
-    'password' => '',
+    'password' => 'root',
     'database' => 'site_edit'
 );
 
